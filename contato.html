@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+</head>
+<body>
+    <h1>
+        Contato
+    </h1>
+
+    <form method="post" action="http://hub.fatecrl.edu.br/sobrino/recebe-v2.php"> 
+        <p>
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" id="cpf" disabled maxlength="11" minlength="11" value="123.456.789-00">
+        </p>
+        <p>
+        <label for="Nome">
+            <b> Nome </b>
+        </label> 
+<br>
+        <input id="Nome" name="Nome" type="text" placeholder="Insira seu nome" autofocus >
+        <!-- required -->
+        </p>
+
+        <p>
+        <label for="senha"><b> Senha </b></label> 
+<br>
+        <input id="senha" name="Senha" type="password" placeholder="Insira senha" maxlength="12" minlength="4" size="10" required>
+        
+        </p>
+
+        <!-- <input type="submit" value="Confirma"> -->
+        <!-- <input type="reset" value="Limpar dados"> não é interessante no quesito acessibilidade -->
+        <p>
+        <label for="Mensagem"><b>Mensagem</b></label><br>
+        
+        <textarea id="Mensagem" name="Mensagem" placeholder="Envie uma mensagem para nós" rows="5" cols="35"></textarea>
+        </p>
+        <p>
+        <label for="Cidade"><b>Cidade</b></label><br>
+        <select name="Cidade" id="Cidade" size="12"> <!-- required -->
+            <option value=""> Escolha </option>
+            <option value="BT"> Bertioga </option>
+            <option value="CB"> Cubatão </option>
+            <option value="GJ"> Guarujá </option>
+            <option value="IT"> Itanhaém </option>
+            <option value="MG"> Mongaguá </option>
+            <option value="PB"> Peruibe </option>
+            <option value="PG"> Praia Grande </option>
+            <option value="ST"> Santos </option>
+            <option value="SP"> São Paulo  </option>
+            <option value="SV"> São Vicente  </option>
+            <option value="Outra"> Outra </option>
+        </select>
+        </p>
+    <fieldset>
+        <legend>Você estuda na Fatec?</legend>
+    <input type="radio" value="S" name="aluno-fatec" id="aluno-fatec-sim"> <!--required-->  
+    <label for="aluno-fatec-sim"><b>SIM</b></label><br>  <!-- for: direciona o rótulo para melhor orientação no click -->
+    <input type="radio" value="N" name="aluno-fatec" id="aluno-fatec-nao"> 
+    <label for="aluno-fatec-nao"><b>NÃO</b></label><br>
+    </fieldset> 
+<br>
+    <fieldset>
+            <legend>Quais suas linguagens favoritas? </legend>
+            <input type="checkbox" name="ling[]" id="linguagem-C" value="C">
+            <label for="linguagem-C">C#</label>
+            <input type="checkbox" name="ling[]" id="linguagem-HTML" value="HTML">
+            <label for="linguagem-HTML">HTML</label>
+            <input type="checkbox" name="ling[]" id="linguagem-py" value="PY">
+            <label for="linguagem-py">Python</label>
+            <input type="checkbox" name="ling[]" id="linguagem-JS" value="JS">
+            <label for="linguagem-JS">JS</label>
+    </fieldset>
+<br>
+    <fieldset>
+        <legend><h2>Outros controles</h2></legend>
+        <label for="notas">Notas</label>
+        <input type="number" name="notas" id="notas" min="0" max="10" step="0.5">
+    </fieldset>
+<br>
+    <p>
+        <label for="url"><b>URL da rede social</b></label>
+        <input type="url" name="url-rs" id="url-rs">
+    </p>
+<br>
+    <p>
+        <label for="email"><b>E-mail</b></label>
+        <input type="email" name="email" id="email">
+    </p>
+<br>
+    <label for="satisfacao"><b>Pesquisa de satisfação (0-10)</b></label>
+    <input type="range" name="satisfacao" id="satisfacao" min="0" max="10" value="0"> 
+<br>
+    <p>
+        <label for="cor" >Cor favorita:</label>
+        <input type="color" name="cor" id="cor">
+    </p>
+<br>
+    <p>
+        <label for="busca">Busca por:</label>
+        <input type="search" name="busca" id="busca">
+    </p>
+<br>
+    <fieldset>
+        <label for="data">Data</label>
+        <input type="date" name="data" id="data">
+<br>
+<br>
+        <label for="hora">Hora</label>
+        <input type="time" name="hora" id="hora">
+<br>
+<br>
+        <label for="data-e-hora"> Data e Hora</label>
+        <input type="datetime-local" name="data-e-hora" id="data-e-hora">
+<br>
+<br>
+        <label for="mes">Mês</label>
+        <input type="month" name="mes" id="mes">
+<br>
+<br>
+        <label for="semana"> Semana</label>
+        <input type="week" name="semana" id="semana">
+    </fieldset>
+<br>    
+    <p>
+        <label for="foto">Foto</label>
+        <input type="file" name="foto" id="foto" accept="image/jpeg, image/png, image/jpg">
+    </p>
+<br>
+    <p>
+        <input type="hidden" name="promo" id="promo" value="Promo-1-2025-30">
+    </p>
+<br>
+    <p>
+        <label for="cep">CEP</label>
+        <input type="text" name="cep" id="cep" pattern="[0-9]{5}-[0-9]{3}" placeholder="XXXXX-XXX">
+    </p>
+            <br>
+           <button>Confirma</button>
+    </form>
+    
+</body>
+</html>
